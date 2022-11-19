@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace MonitorBackend.Data.Entity;
 
-public partial class Log
+public partial class Log : Abstract.Entity
 {
-    public int Id { get; set; }
-
     public string Source { get; set; } = null!;
 
     public DateTime Timegenerated { get; set; }

@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace MonitorBackend.Data.Entity;
 
-public partial class Load
+public partial class Load : Abstract.Entity
 {
-    public int Id { get; set; }
-
     public int Value { get; set; }
 
     public DateTime Datetime { get; set; }
