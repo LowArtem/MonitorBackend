@@ -20,7 +20,6 @@
       <Folder Include="Controllers" />
       <Folder Include="Data\Entity\" />
       <Folder Include="Data\Repositories\Abstract" />
-      <Folder Include="Services" />
     </ItemGroup>
 
 </Project>
