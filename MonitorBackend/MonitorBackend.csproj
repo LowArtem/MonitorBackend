@@ -17,7 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
       <Folder Include="Data\Entity\" />
       <Folder Include="Data\Repositories\Abstract" />
     </ItemGroup>
