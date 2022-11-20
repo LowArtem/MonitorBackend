@@ -21,7 +21,7 @@ public class LogController : BaseApiController
     public async Task<ActionResult<List<LogDto>>> GetAllLogs()
     {
         var logs = await _logService.GetAllLogs();
-        return logs == null ? BadRequest("") : Ok(logs.Select(l => l.MapToDto()));
+        return logs == null ? BadRequest("Error") : Ok(logs.Select(l => l.MapToDto()));
     }
     
     [HttpGet]
@@ -29,7 +29,7 @@ public class LogController : BaseApiController
     public async Task<ActionResult<List<LogDto>>> GetLogsByComputer([FromRoute] int computerId)
     {
         var logs = await _logService.GetLogsByComputerId(computerId);
-        return logs == null ? BadRequest("") : Ok(logs.Select(l => l.MapToDto()));
+        return logs == null ? BadRequest("Error") : Ok(logs.Select(l => l.MapToDto()));
     }
     
     [HttpGet]
@@ -37,7 +37,7 @@ public class LogController : BaseApiController
     public async Task<ActionResult<List<LogDto>>> GetLogsByType([FromRoute] int typeid)
     {
         var logs = await _logService.GetLogsByType(typeid);
-        return logs == null ? BadRequest("") : Ok(logs.Select(l => l.MapToDto()));
+        return logs == null ? BadRequest("Error") : Ok(logs.Select(l => l.MapToDto()));
     }
     
     [HttpGet]
@@ -45,7 +45,7 @@ public class LogController : BaseApiController
     public async Task<ActionResult<List<LogDto>>> GetLogsByAlert([FromRoute] int alertId)
     {
         var logs = await _logService.GetLogsByAlertLevel(alertId);
-        return logs == null ? BadRequest("") : Ok(logs.Select(l => l.MapToDto()));
+        return logs == null ? BadRequest("Error") : Ok(logs.Select(l => l.MapToDto()));
     }
 
     [HttpPost]
