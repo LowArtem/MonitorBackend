@@ -10,5 +10,6 @@ public static class ServiceRegister
         .AddScoped<DeviceService>()
         .AddScoped<MalwareService>()
         .AddScoped<MalwaresTypeService>()
+        .AddScoped<DeviceResourcesService>()
         .AddScoped<TypesOfLogService>();
 }

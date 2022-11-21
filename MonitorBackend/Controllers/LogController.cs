@@ -50,8 +50,8 @@ public class LogController : BaseApiController
 
     [HttpPost]
     [Route("")]
-    public async Task AddLogs([FromBody] List<Log> logs)
+    public async Task AddLogs([FromBody] List<LogDto> logs)
     {
-        await _logService.AddLogs(logs);
+        await _logService.AddLogs(logs.Select(l => l.MapToLog()).ToList());
     }
 }

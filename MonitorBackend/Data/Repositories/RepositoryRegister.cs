@@ -13,6 +13,6 @@ public static class RepositoryRegister
         .AddScoped<IRepository<Log>, LogRepository>()
         .AddScoped<IRepository<Malwarereport>, MalwareReportRepository>()
         .AddScoped<IRepository<Malwaretype>, DbRepository<Malwaretype>>()
-        .AddScoped<IRepository<Object>, DbRepository<Object>>()
+        .AddScoped<IRepository<Object>, ObjectRepository>()
         .AddScoped<IRepository<Typesoflog>, DbRepository<Typesoflog>>();
 }
